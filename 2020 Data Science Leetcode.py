@@ -2321,3 +2321,89 @@ def addDigits2(num):
 
 addDigits2(38)
 
+
+# ### 263. Ugly Number
+
+# In[ ]:
+
+
+Write a program to check whether a given number is an ugly number.
+
+Ugly numbers are positive numbers whose prime factors only include 2, 3, 5.
+
+Input: 6
+Output: true
+Explanation: 6 = 2 × 3
+
+Input: 14
+Output: false 
+Explanation: 14 is not ugly since it includes another 
+
+
+# In[36]:
+
+
+def isUgly(num): 
+    """
+    :type num:int
+    :rtype:bool
+    """
+    if num<=0:
+        return False
+    while num%2==0 or num%3==0 or num%5==0:
+        if num%2==0:
+            num=num/2
+        elif num%3==0:
+            num=num/3
+        else:
+            num=num/5
+    return num==1
+    
+
+
+# In[41]:
+
+
+def isUgly(num):  #Better solution
+    """
+    :type num:int
+    :rtype:bool
+    """
+    if num<=0:
+        return False
+    for x in [2,3,5]:
+        while num%x==0:
+            num=num/x
+    return num==1
+            
+
+
+# In[42]:
+
+
+isUgly(0)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
