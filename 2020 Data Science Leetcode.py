@@ -7,6 +7,8 @@
 
 # ### Dynamic Programming/Recursive
 
+# ### Recursion
+
 # In[ ]:
 
 
@@ -2298,7 +2300,7 @@ addDigits(38)
 # In[22]:
 
 
-###recursion
+###recursion!!!
 
 
 # In[20]:
@@ -2306,12 +2308,12 @@ addDigits(38)
 
 def addDigits2(num):
     if 0<=num<=9:
-        return num
+        return num  ###actually only return here!
     tmp=0
     while num:
         tmp+=num%10
         num=num//10
-    return addDigits2(tmp)
+    return addDigits2(tmp) #here only do things like addDigits2(1888)-->addDigits(25)-->addDigits2(7)
 
 
 # In[21]:
