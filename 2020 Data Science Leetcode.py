@@ -2384,6 +2384,50 @@ def isUgly(num):  #Better solution
 isUgly(0)
 
 
+# ### 268. Missing Number
+
+# In[ ]:
+
+
+Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
+
+Input: [3,0,1]
+Output: 2
+
+Input: [9,6,4,2,3,5,7,0,1]
+Output: 8
+
+
+# In[61]:
+
+
+def missingNumber(nums):
+    expected_nums=[x for x in range(len(nums)+1)]
+    return sum(expected_nums)-sum(nums)
+
+
+# In[59]:
+
+
+def missingNumber(nums):
+    for i,v in enumerate(sorted(nums)):
+        if i!=v:
+            return i
+
+
+# In[63]:
+
+
+nums=[0,1]
+missingNumber(nums)
+
+
+# In[ ]:
+
+
+
+
+
 # In[ ]:
 
 
