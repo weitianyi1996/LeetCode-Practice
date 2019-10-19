@@ -176,7 +176,7 @@ def findUnsortedSubarray(nums):
 findUnsortedSubarray(nums)
 
 
-#  ### find prime
+# ### 204. Count Primes
 
 # Input: 10
 # Output: 4
@@ -198,12 +198,6 @@ def findprime(n):
             
 
 
-# In[10]:
-
-
-findprime(11)
-
-
 # In[26]:
 
 
@@ -218,10 +212,42 @@ def countprimes(n):
     return sum(primes)
 
 
-# In[27]:
+# In[212]:
 
 
-countprimes(11)
+def countPrimes(n):
+    if n<3:
+        return 0
+    else:
+        import numpy as np
+        odd_n=[x for x in range(3,n,2)]
+        L=[]
+        for x in odd_n:
+            if np.prod([x%i for i in range(2,int(x**0.5)+1)])!=0: #3,5,7 []
+                 L.append(1)
+        return sum(L)+1
+                
+
+
+# In[218]:
+
+
+def countPrimes(n):
+    if n<=2:
+        return 0
+    else:
+        prime=[True]*n
+        prime[0]=prime[1]=False
+        for i in range(2,int(n**0.5)+1): #n=143(11*13) could be definitely be updated when we do factors to 12
+            if prime[i]:
+                prime[i**2:n:i]=[False]*len(prime[i**2:n:i])
+        return sum(prime)
+
+
+# In[219]:
+
+
+countPrimes(10000)
 
 
 # ### rotate array
