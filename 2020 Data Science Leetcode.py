@@ -66,13 +66,13 @@ longestCommonPrefix(Input)
 not 'a'
 
 
-# ### Find min sub array to make the whole array sorted
+# ### 581. Shortest Unsorted Continuous Subarray
 
 # Input: [2, 6, 4, 8, 10, 9, 15]
 # Output: 5
 # Explanation: You need to sort [6, 4, 8, 10, 9] in ascending order to make the whole array sorted in ascending order.
 
-# In[3]:
+# In[64]:
 
 
 nums=[2, 6, 4, 8, 10, 9, 15]
@@ -157,6 +157,23 @@ def findUnsortedSubarray(self, nums):
 
 
 
+
+
+# In[70]:
+
+
+def findUnsortedSubarray(nums):
+    expected_nums=sorted(nums)
+    l=[i for i in range(len(nums)) if nums[i]!=expected_nums[i]]
+    if len(l)==0:
+        return 0
+    return max(l)-min(l)+1
+
+
+# In[71]:
+
+
+findUnsortedSubarray(nums)
 
 
 #  ### find prime
