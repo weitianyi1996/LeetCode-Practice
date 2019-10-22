@@ -2544,3 +2544,20 @@ def isPowerOfThree(n):
 
 isPowerOfThree(81)
 
+
+# ### 342. Power of Four
+
+# In[246]:
+
+
+def isPowerOfFour(num):
+    if num<=0:
+        return False
+    else:
+        while num>1:
+            if num%4==0:
+                num=num/4
+            else:
+                return False
+        return True
+
