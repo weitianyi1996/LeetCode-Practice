@@ -2507,8 +2507,40 @@ nums=[0,1,0,3,12]
 moveZeros(nums)
 
 
+# ### 326. Power of Three
+
 # In[ ]:
 
 
+Given an integer, write a function to determine if it is a power of three.
 
+Input: 27
+Output: true
+
+Input: 0
+Output: false
+
+Input: 9
+Output: true
+
+
+# In[242]:
+
+
+def isPowerOfThree(n):
+    if n<=0:
+        return False
+    else:
+        while n>1:
+            if n%3==0:
+                n=n/3
+            else:
+                return False
+        return True
+
+
+# In[244]:
+
+
+isPowerOfThree(81)
 
