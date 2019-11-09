@@ -2692,3 +2692,65 @@ findDisappeardNumbers(nums)
 
 abs(-13)
 
+
+# ### 345. Reverse Vowels of a String
+
+# In[ ]:
+
+
+Write a function that takes a string as input and reverse only the vowels of a string.
+
+Example 1:
+
+Input: "hello"
+Output: "holle"
+Example 2:
+
+Input: "leetcode"
+Output: "leotcede"
+
+
+# In[72]:
+
+
+def reverseVowels(s):
+    vowels=['a','e','i','o','u','A','E','I','O','U']
+    reverse_vowels=[l for l in s if l in vowels][::-1]
+    L=[]
+    i=0
+    for l in s:
+        if l not in vowels:
+            L.append(l)
+        else:
+            L.append(reverse_vowels[i])
+            i+=1
+    return ''.join(L)
+
+
+# In[107]:
+
+
+#two pointer
+def reverseVowels(s):
+    s=list(s)
+    vowels=['a','e','i','o','u','A','E','I','O','U']
+    l,r=0,len(s)-1
+    while l<r:
+        if s[l] not in vowels:
+            l+=1
+        if s[r] not in vowels:
+            r-=1
+        if s[l]in vowels and s[r] in vowels:
+            #print(l,r)
+            s[l],s[r]=s[r],s[l]
+            l+=1
+            r-=1
+           
+    return ''.join(s)
+
+
+# In[108]:
+
+
+reverseVowels('leetcode')#race a car
+
