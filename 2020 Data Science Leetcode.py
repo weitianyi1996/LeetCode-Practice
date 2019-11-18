@@ -2727,7 +2727,7 @@ def reverseVowels(s):
     return ''.join(L)
 
 
-# In[107]:
+# In[2]:
 
 
 #two pointer
@@ -2749,8 +2749,48 @@ def reverseVowels(s):
     return ''.join(s)
 
 
-# In[108]:
+# In[3]:
 
 
 reverseVowels('leetcode')#race a car
+
+
+# ### 349. Intersection of Two Arrays
+
+# In[ ]:
+
+
+Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Output: [2]
+
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [9,4]
+
+
+# In[9]:
+
+
+def intersection(nums1, nums2):
+    return list(set([x for x in nums1 if x in nums2]))
+
+
+# In[16]:
+
+
+def intersection(nums1, nums2):
+    return list(set(nums1)&set(nums2))
+
+
+# In[17]:
+
+
+nums1 = [1,2,2,1]
+nums2 = [2,2]
+intersection(nums1,nums2)
+
+
+# In[ ]:
+
+
+
 
