@@ -2789,8 +2789,60 @@ nums2 = [2,2]
 intersection(nums1,nums2)
 
 
-# In[ ]:
+# ### 350. Intersection of Two Arrays II
+
+# Each element in the result should appear as many times as it shows in both arrays.
+# The result can be in any order.
+
+# In[36]:
 
 
+def intersect(nums1,nums2):
+    L=[]
+    for x in nums1:
+        if x in nums2:
+            L.append(x)
+            nums2.remove(x)
+    return L
 
+
+# In[37]:
+
+
+nums1 = [1,2,2,1]
+nums2 = [2]
+intersect(nums1,nums2)
+
+
+# In[43]:
+
+
+#get frequency
+counts={}
+for num in nums1:
+    counts[num]=counts.get(num,0)+1
+counts
+
+
+# In[44]:
+
+
+def intersect(nums1,nums2):
+    count={}
+    L=[]
+    for num in nums1:
+        count[num]=count.get(num,0)+1
+    for num in nums2:
+        if num in count and count[num]>0:
+            L.append(num)
+            count[num]-=1
+    return L
+
+
+# In[45]:
+
+
+nums1 = [1,2,2,1]
+nums2 = [2]
+intersect(nums1,nums2)
 
