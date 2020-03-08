@@ -1,6 +1,4 @@
 # LeetCode-Practice
-My personal leetcode webpage:https://leetcode.com/weitianyi1996/
-
 I keep my Python Code on practicing LeetCode algorithm problems here.
 Each week supposed to finish 5 questions. 
 Sorry, I do not keep this practice notebook looks neat. I do those great questions maybe two times or three times. So here you probably may see me struggling with my 'ugly and slow' solutions at my very first try.
