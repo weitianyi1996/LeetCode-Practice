@@ -968,12 +968,6 @@ b="11010100101110111000111110011000101010000110101110101000001101101100101110111
 addBinary(a,b)
 
 
-# In[ ]:
-
-
-
-
-
 # ### Sqrt(x)
 # 
 # Implement int sqrt(int x).
@@ -2845,4 +2839,70 @@ def intersect(nums1,nums2):
 nums1 = [1,2,2,1]
 nums2 = [2]
 intersect(nums1,nums2)
+
+
+# In[2]:
+
+
+type(4**1/2)
+
+
+# ### 367. Valid Perfect Square
+
+# Given a positive integer num, write a function which returns True if num is a perfect square else False.
+# 
+# Note: Do not use any built-in library function such as sqrt.
+# 
+# Example 1:
+# 
+# Input: 16
+# Output: true
+# Example 2:
+# 
+# Input: 14
+# Output: false
+
+# In[13]:
+
+
+def isPerfectSquare(num):
+    if num < 0:
+        return False
+    elif num == 0:
+        return True
+    else:
+        l,r = 1,num
+        while l <= r:
+            mid = (l+r)//2
+            if mid**2 > num:
+                r = mid- 1 
+            elif mid ** 2 < num:
+                l = mid + 1
+            else:
+                return True
+        return False
+
+
+# In[16]:
+
+
+isPerfectSquare(19)
+
+
+# In[20]:
+
+
+2<<5
+
+
+# In[21]:
+
+
+2**5
+
+
+# In[ ]:
+
+
+
 
