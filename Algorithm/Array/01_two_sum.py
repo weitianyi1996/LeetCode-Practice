@@ -28,6 +28,34 @@ class Solution(object):
                 dic[value] = index
 
 
+# Two Pointer
+# [3,2,4]
+# [3,3]
+# student_tuples = [
+#     ('john', 'A', 15),
+#     ('jane', 'B', 12),
+#     ('dave', 'B', 10),
+# ]
+# sorted(student_tuples, key=lambda student: student[2])
+class Solution(object):
+    def two_sum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        nums = enumerate(nums)
+        sort_nums = sorted(nums, key= lambda x: x[1])
+        l ,r = 0, len(sort_nums)-1
+        while l<r:
+            if sort_nums[l][1]+sort_nums[r][1] == target:
+                return sort_nums[l][0],sort_nums[r][0]
+            elif sort_nums[l][1]+sort_nums[r][1] > target:
+                r -= 1
+            elif sort_nums[l][1]+sort_nums[r][1] < target:
+                l += 1
+
+
 
 
 
