@@ -774,7 +774,7 @@ maxSubArray(Input)
 # In[14]:
 
 
-#Kadane’s Algorithm: O(n)  only track the positive continous array
+#Kadane’s algorithm: O(n)  only track the positive continous array
 def maxSubArray(nums):
     max_ending=0
     max_sofar=-abs(max(nums))-1
