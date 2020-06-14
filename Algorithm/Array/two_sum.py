@@ -10,6 +10,9 @@
 # return [0, 1].
 
 
+# Hash Table
+# link: http://blog.chapagain.com.np/hash-table-implementation-in-python-data-structures-algorithms/
+# hash('10')
 class Solution(object):
     def two_sum(self, nums, target):
         """
@@ -18,33 +21,14 @@ class Solution(object):
         :rtype: List[int]
         """
         dic = {}
-        for i, num in enumerate(nums):
-            if target-num in dic:
-                return [dic[target-num],i]
+        for index, value in enumerate(nums):
+            if target-value in dic:
+                return [dic[target-value], index]
             else:
-                dic[num] = i
+                dic[value] = index
 
 
 
 
 
 
-
-# class Solution(object):
-#     def two_sum(self, nums, target):
-#         """
-#         :type nums: List[int]
-#         :type target: int
-#         :rtype: List[int]
-#         """
-#         if len(nums)==0:
-#             return None
-#         l, r = 0, len(nums)-1
-#         while l <= r:
-#             mid = (l+r)//2
-#             if nums[l]+nums[r] == target:
-#                 return [l,r]
-#             elif nums[l]+nums[r] > target:
-#                 r = mid-1
-#             elif nums[l]+nums[r] < target:
-#                 l = mid+1
