@@ -24,12 +24,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        unique_number_of_element = 1
+        unique_element = 1
         for i in range(len(nums)-1):
             if nums[i] != nums[i+1]:
-                nums[unique_number_of_element] = nums[i+1]
-                unique_number_of_element += 1
-        return unique_number_of_element
+                nums[unique_element] = nums[i+1]
+                unique_element += 1
+        return unique_element
 
 
 # this is not the ideal solution based on the description of the question
