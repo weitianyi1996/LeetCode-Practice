@@ -18,7 +18,7 @@
 # It doesn't matter what values are set beyond the returned length.
 
 
-class Solution(object):
+class Solution1(object):
     def removeDuplicates(self, nums):
         """
         :type nums: List[int]
@@ -33,7 +33,7 @@ class Solution(object):
 
 
 # this is not the ideal solution based on the description of the question
-class Solution(object):
+class Solution2(object):
     def removeDuplicates(self, nums):
         """
         :type nums: List[int]

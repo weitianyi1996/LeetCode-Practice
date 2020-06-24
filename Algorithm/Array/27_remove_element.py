@@ -39,7 +39,7 @@
 # }
 
 
-class Solution(object):
+class Solution1(object):
     def removeElement(self, nums, val):
         """
         :type nums: List[int]
@@ -55,7 +55,7 @@ class Solution(object):
 
 
 # two pointer
-class Solution(object):
+class Solution2(object):
     def removeElement(self, nums, val):
         """
         :type nums: List[int]

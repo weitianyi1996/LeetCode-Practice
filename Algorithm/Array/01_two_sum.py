@@ -13,7 +13,7 @@
 # Hash Table
 # link: http://blog.chapagain.com.np/hash-table-implementation-in-python-data-structures-algorithms/
 # hash('10')
-class Solution(object):
+class Solution1(object):
     def two_sum(self, nums, target):
         """
         :type nums: List[int]
@@ -37,7 +37,7 @@ class Solution(object):
 #     ('dave', 'B', 10),
 # ]
 # sorted(student_tuples, key=lambda student: student[2])
-class Solution(object):
+class Solution2(object):
     def two_sum(self, nums, target):
         """
         :type nums: List[int]

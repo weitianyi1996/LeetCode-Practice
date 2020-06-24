@@ -19,7 +19,7 @@
 # Output: 0
 
 
-class Solution(object):
+class Solution1(object):
     def searchInsert(self, nums, target):
         """
         :type nums: List[int]
@@ -35,3 +35,36 @@ class Solution(object):
                 if nums[i] < target < nums[i+1]:
                     return i+1
             return len(nums)
+
+
+# using python builtin index
+class Solution2(object):
+    def searchInsert(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        if target not in nums:
+            nums.append(target)
+            nums = sorted(nums)
+        return nums.index(target)
+
+
+class Solution3(object):
+    def searchInsert(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        return len([i for i in nums if i<target ])
+
+
+class Solution4(object):
+    def searchInsert(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
