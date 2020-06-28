@@ -10,7 +10,21 @@
 # If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
 
-class Solution(object):
+# dynamic programing
+class Solution1(object):
+    def maxSubArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        dp = [0 for i in range(len(nums))]
+        dp[0] = nums[0]
+        for i in range(1,len(nums)):
+            dp[i] = max(dp[i-1]+nums[i], nums[i])  # ending in i, larger sum--continue or restart?
+        return max(dp)
+
+
+class Solution2(object):
     def maxSubArray(self, nums):
         """
         :type nums: List[int]
