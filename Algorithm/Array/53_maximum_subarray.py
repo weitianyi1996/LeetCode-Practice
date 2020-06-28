@@ -20,7 +20,7 @@ class Solution1(object):
         dp = [0 for i in range(len(nums))]
         dp[0] = nums[0]
         for i in range(1,len(nums)):
-            dp[i] = max(dp[i-1]+nums[i], nums[i])  # ending in i, larger sum--continue/merge or restart?
+            dp[i] = max(dp[i-1]+nums[i], nums[i])  # ending in i, larger sum--link with previous elements / itself alone?
         return max(dp)
 
 
