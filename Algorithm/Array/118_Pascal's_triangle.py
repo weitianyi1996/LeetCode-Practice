@@ -17,7 +17,6 @@
 # ]
 
 
-
 class Solution():
     def generate(self, numRows):
         """
@@ -25,16 +24,14 @@ class Solution():
         :rtype: List[List[int]]
         """
         d = []
+        last_time_list = [1, 1]
+
         for i in range(0, numRows):
             l = [1 for value in range(i+1)]
-            print(l)
             if i >= 2:
-                last_time_list = [1, 1]
-                print(l)
                 for x in range(1, len(l)-1):
                     l[x] = last_time_list[x-1]+last_time_list[x]
-                last_time_list = []
-                last_time_list.append(l)
+                last_time_list = l
             d.append(l)
         return d
 
